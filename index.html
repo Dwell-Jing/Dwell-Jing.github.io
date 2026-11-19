@@ -1,19 +1,684 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Yubin Jing — research in multimodal generation, image editing, and long video."><meta name="theme-color" content="#f6f5f0"><title>Yubin Jing — Multimodal Research</title>
-<style>
-:root{--bg:#f6f5f0;--ink:#222621;--muted:#6f766d;--line:#d8dbd0;--accent:#3f6152;--paper:#fffefa;--mono:ui-monospace,SFMono-Regular,Consolas,monospace;--serif:Georgia,'Times New Roman',serif;--sans:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid var(--accent);outline-offset:5px}.wrap{width:min(1152px,calc(100% - 96px));margin:auto}header{display:flex;align-items:center;justify-content:space-between;padding:30px 0;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:10px;font-size:14px;letter-spacing:.02em;font-weight:650}.brand-mark{width:25px;height:25px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;font:italic 16px var(--serif)}nav{display:flex;gap:30px;align-items:center;font-size:12px;font-weight:600}nav a{color:#525a51}nav a:hover,.text-link:hover{color:var(--accent)}.arrow{display:inline-block;transition:transform .2s}.text-link:hover .arrow{transform:translate(3px,-3px)}.hero{min-height:555px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:40px;padding:82px 0 96px}.eyebrow,.section-label,.index,.footnote,.card-kicker,.list-type{font:10px/1.5 var(--mono);letter-spacing:.13em;text-transform:uppercase}.eyebrow{display:flex;align-items:center;gap:9px;color:var(--accent);margin-bottom:25px}.dot{width:7px;height:7px;border-radius:50%;background:#718d74;box-shadow:0 0 0 4px #dce7db}h1,h2,h3,p{margin:0}h1{font:normal clamp(55px,6.5vw,91px)/.99 var(--serif);letter-spacing:-.055em;max-width:680px}h1 em{font-weight:normal;color:var(--accent)}.hero-description{max-width:500px;margin-top:26px;font-size:16px;line-height:1.8;color:#626a60}.hero-description strong{font-weight:600;color:#3c443b}.hero-links{display:flex;gap:24px;flex-wrap:wrap;margin-top:30px}.text-link{font-size:12px;font-weight:650;letter-spacing:.03em;border-bottom:1px solid #9ca79a;padding-bottom:6px}.hero-art{width:100%;max-width:440px;justify-self:end}.hero-art svg,.art svg{display:block;width:100%;height:auto}.section-head{border-top:1px solid var(--ink);padding:20px 0 30px;display:flex;justify-content:space-between;align-items:baseline;gap:20px}.section-label{color:#5a6559}.section-title{font:normal clamp(30px,4vw,43px)/1.1 var(--serif);letter-spacing:-.04em}.head-left{display:flex;gap:27px;align-items:baseline}.index{color:var(--muted)}.section-note{font-size:12px;color:var(--muted)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.project{display:flex;flex-direction:column;background:var(--paper);border:1px solid #dfe2d9;transition:transform .24s,border-color .24s}.project:hover{transform:translateY(-4px);border-color:#a4b3a3}.art{overflow:hidden;background:#e7ece5;aspect-ratio:1.77}.art.second{background:#eae9e1}.art svg{height:100%;object-fit:cover}.project-body{padding:28px 30px 30px;display:flex;flex-direction:column;flex:1}.card-kicker{color:var(--accent);margin-bottom:16px}.project h3{font:normal 27px/1.16 var(--serif);letter-spacing:-.025em}.project .full-title{font-size:12px;line-height:1.55;color:#687168;margin-top:8px}.project p{font-size:13px;line-height:1.75;color:#646c62;margin-top:17px;max-width:440px}.card-links{display:flex;gap:18px;margin-top:auto;padding-top:28px}.card-links a,.row-links a{font-size:11px;font-weight:700;letter-spacing:.035em;border-bottom:1px solid #a7b1a2;padding-bottom:5px}.card-links a:hover,.row-links a:hover{color:var(--accent);border-color:var(--accent)}.other{padding-top:98px}.paper-row{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:20px;padding:26px 0;border-bottom:1px solid var(--line);align-items:start}.paper-row .index{padding-top:5px}.paper-row h3{font:normal 21px/1.25 var(--serif);letter-spacing:-.02em}.paper-row p{color:var(--muted);font-size:12px;line-height:1.7;margin-top:8px;max-width:700px}.row-links{display:flex;gap:17px;white-space:nowrap;padding-top:7px}.list-type{color:var(--accent);display:inline-block;margin-right:8px}.about{padding:100px 0 96px}.about-inner{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px}.about-copy{font:normal clamp(23px,2.7vw,33px)/1.4 var(--serif);letter-spacing:-.025em;color:#414b40;max-width:700px}.about-copy em{color:var(--accent)}.coursework{margin-top:35px;padding-top:22px;border-top:1px solid var(--line)}.coursework .section-label{margin-bottom:12px}.coursework p{font-size:12px;line-height:1.9;color:var(--muted)}.coursework a{border-bottom:1px solid #b8c1b6;color:#495749}footer{border-top:1px solid var(--line);padding:23px 0 32px;display:flex;justify-content:space-between;gap:20px;color:var(--muted)}.footnote{font-size:9px}.back{font-size:11px;font-weight:600}@media(max-width:760px){.wrap{width:min(100% - 40px,600px)}header{padding:22px 0}.brand{font-size:13px}nav{gap:18px}nav a:first-child{display:none}.hero{grid-template-columns:1fr;gap:28px;padding:72px 0 70px;min-height:0}.hero-art{max-width:315px;justify-self:end;margin-top:-10px}.hero-description{font-size:15px}.grid{grid-template-columns:1fr;gap:17px}.section-head{padding:17px 0 24px}.head-left{gap:15px}.section-note{display:none}.other{padding-top:75px}.paper-row{grid-template-columns:25px 1fr;gap:10px}.row-links{grid-column:2;padding-top:5px}.about{padding:75px 0}.about-inner{grid-template-columns:1fr;gap:23px}.project-body{padding:24px}.project h3{font-size:25px}footer{align-items:flex-start}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.project,.arrow{transition:none}}
-</style></head><body id="top"><div class="wrap"><header><a class="brand" href="#top" aria-label="Yubin Jing, home"><span class="brand-mark">j</span> YUBIN JING</a><nav aria-label="Main navigation"><a href="#research">Research</a><a href="#about">About</a><a href="https://github.com/Dwell-Jing">GitHub ↗</a></nav></header>
-<main><section class="hero" aria-labelledby="hero-title"><div><div class="eyebrow"><span class="dot"></span> Multimodal research · Georgia Tech</div><h1 id="hero-title">Making models<br><em>see, create</em><br>and remember.</h1><p class="hero-description">Hi, I’m <strong>Yubin Jing</strong>, an M.S. student in Computational Science and Engineering at Georgia Tech. I work on image editing, long video generation, and multimodal agents.</p><div class="hero-links"><a class="text-link" href="#research">Explore my work <span class="arrow">↗</span></a><a class="text-link" href="mailto:whalesjyb@gmail.com">Get in touch <span class="arrow">↗</span></a></div></div><div class="hero-art" aria-hidden="true"><svg viewBox="0 0 440 370" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="229" cy="181" r="150" fill="#e9eee5"/><circle cx="229" cy="181" r="125" stroke="#aab9a7" stroke-dasharray="3 7"/><circle cx="229" cy="181" r="89" stroke="#bdcaba"/><path d="M64 181H394M229 16V346" stroke="#bdcaba"/><path d="M110 94L348 268M120 274L337 88" stroke="#c9d4c6"/><rect x="131" y="95" width="154" height="117" rx="2" transform="rotate(-8 131 95)" fill="#fffefa" stroke="#66816d"/><path d="M161 169L189 137L212 161L235 125L267 159" stroke="#6f8b75" stroke-width="1.5"/><circle cx="174" cy="127" r="8" fill="#b5c7af"/><rect x="190" y="147" width="154" height="117" rx="2" transform="rotate(9 190 147)" fill="#f8faf4" stroke="#66816d"/><path d="M210 221L242 180L264 205L291 173L319 206" stroke="#6f8b75" stroke-width="1.5"/><path d="M232 171C265 148 298 160 305 177" stroke="#324e3d" stroke-width="1.5"/><path d="M299 174L305 178L307 171" stroke="#324e3d" stroke-width="1.5"/><circle cx="88" cy="100" r="4" fill="#718d74"/><circle cx="368" cy="245" r="4" fill="#718d74"/><text x="49" y="246" fill="#708072" font-size="9" font-family="monospace" letter-spacing="1">CONTEXT</text><text x="323" y="97" fill="#708072" font-size="9" font-family="monospace" letter-spacing="1">CREATE</text></svg></div></section>
-<section id="research" aria-labelledby="research-title"><div class="section-head"><div class="head-left"><span class="index">01 /</span><h2 id="research-title" class="section-title">Selected research</h2></div><span class="section-note">A closer look at recent work</span></div><div class="grid"><article class="project"><div class="art" aria-hidden="true"><svg viewBox="0 0 540 305" xmlns="http://www.w3.org/2000/svg"><rect width="540" height="305" fill="#e3ebe2"/><path d="M0 248H540M60 0V305M480 0V305" stroke="#cfdbcd"/><text x="36" y="39" fill="#63806a" font-family="monospace" font-size="10" letter-spacing="2">LONG VIDEO / MEMORY</text><rect x="52" y="82" width="120" height="111" rx="3" fill="#f8faf4" stroke="#8da88e"/><rect x="210" y="82" width="120" height="111" rx="3" fill="#f8faf4" stroke="#8da88e"/><rect x="368" y="82" width="120" height="111" rx="3" fill="#f8faf4" stroke="#8da88e"/><path d="M67 172L93 139L112 157L139 121L158 151M225 172L251 139L270 157L297 121L316 151M383 172L409 139L428 157L455 121L474 151" stroke="#79967e" stroke-width="1.6" fill="none"/><circle cx="91" cy="110" r="7" fill="#c6d6be"/><circle cx="249" cy="110" r="7" fill="#c6d6be"/><circle cx="407" cy="110" r="7" fill="#c6d6be"/><path d="M173 138H208M331 138H366M112 207V229H270V207M270 229H428V207" stroke="#8da88e" fill="none"/><text x="214" y="270" fill="#63806a" font-family="monospace" font-size="10" letter-spacing="1.5">COMMIT FORCING</text></svg></div><div class="project-body"><div class="card-kicker">01 — Video generation · First author</div><h3>What Helps Denoising<br>Can Hurt Memory</h3><div class="full-title">Rethinking History in Long Video Generation</div><p>A training-free inference method for long-video consistency, exploring how autoregressive models read history when writing to the KV cache.</p><div class="card-links"><a href="https://arxiv.org/abs/2611.00937">PAPER ↗</a><a href="https://github.com/Dwell-Jing/commit-forcing">CODE ↗</a></div></div></article><article class="project"><div class="art second" aria-hidden="true"><svg viewBox="0 0 540 305" xmlns="http://www.w3.org/2000/svg"><rect width="540" height="305" fill="#ebece3"/><path d="M0 248H540M60 0V305M480 0V305" stroke="#dcdfd1"/><text x="36" y="39" fill="#74806b" font-family="monospace" font-size="10" letter-spacing="2">IMAGE EDITING / INTERACTION</text><rect x="113" y="62" width="315" height="177" rx="2" fill="#fbfbf6" stroke="#aebaaa"/><path d="M133 210L188 157L222 183L273 130L323 175L353 150L409 207" fill="#e1e9db" stroke="#9eaf99" stroke-width="1.5"/><circle cx="339" cy="101" r="14" fill="#d0ddc8"/><rect x="191" y="123" width="106" height="70" rx="2" stroke="#527b60" stroke-width="2" stroke-dasharray="6 4" fill="none"/><path d="M347 97C331 119 311 129 284 139M292 130L284 139L296 141" stroke="#527b60" stroke-width="2" fill="none"/><circle cx="347" cy="97" r="4" fill="#527b60"/><text x="214" y="270" fill="#73816d" font-family="monospace" font-size="10" letter-spacing="1.5">VPEBENCH</text></svg></div><div class="project-body"><div class="card-kicker">02 — Image editing · First author</div><h3>VPEBench</h3><div class="full-title">The Image Plane Is an Instruction Surface for Image Editing</div><p>A benchmark for editing images with visual instructions such as boxes, arrows, and curves, covering 742 examples across 17 task types.</p><div class="card-links"><a href="https://github.com/Dwell-Jing/vpebench">BENCHMARK &amp; CODE ↗</a></div></div></article></div></section>
-<section class="other" aria-labelledby="other-title"><div class="section-head"><div class="head-left"><span class="index">02 /</span><h2 id="other-title" class="section-title">More research</h2></div><span class="section-note">Selected collaborations</span></div><article class="paper-row"><span class="index">01</span><div><h3>Folding Language Models into Themselves</h3><p><span class="list-type">Co-first author</span> Compressing language models by folding adjacent layers into shared blocks with lightweight corrections.</p></div><div class="row-links"><a href="https://arxiv.org/abs/2611.18113">PAPER ↗</a><a href="https://github.com/myboker/concertina">CODE ↗</a></div></article><article class="paper-row"><span class="index">02</span><div><h3>Post-Training Leaves Behavioral Shadows on Unrelated Decisions</h3><p><span class="list-type">Second author</span> Studying how post-training affects unrelated decisions and task-free distillation using selected prompts.</p></div><div class="row-links"><a href="https://arxiv.org/abs/2609.29233">PAPER ↗</a><a href="https://github.com/myboker/ATD">CODE ↗</a></div></article></section>
-<section class="about" id="about" aria-labelledby="about-title"><div class="section-head"><div class="head-left"><span class="index">03 /</span><h2 id="about-title" class="section-title">A little more</h2></div></div><div class="about-inner"><div class="section-label">Ideas, experiments,<br>and everything between.</div><div><p class="about-copy">I’m interested in how multimodal models can <em>understand intent</em>, generate visual content, and stay consistent over time.</p><div class="coursework"><div class="section-label">Earlier coursework</div><p><a href="https://github.com/Dwell-Jing/SGANet-Vulnerability-Detection">SGANet Vulnerability Detection ↗</a><br><a href="https://github.com/Dwell-Jing/Information-Diffusion-Graph-Simulation-Framework">Information Diffusion Graph Simulation ↗</a></p></div></div></div></section></main><footer><span class="footnote">Yubin Jing · Georgia Institute of Technology</span><a class="back" href="#top">Back to top ↑</a></footer></div><style id="playground-style">
-:root{--bg:#111a19;--ink:#edf1e7;--muted:#a9b9aa;--line:#34443c;--accent:#b7ed85;--paper:#192522}body{background:var(--bg);color:var(--ink)}header{border-color:var(--line)}nav a,.hero-description,.hero-description strong,.section-label,.section-note,.index,.footnote{color:#afc0b0}.hero-description{color:#c2d0c2}.hero-description strong{color:#f4f6ed}.dot{background:#b7ed85;box-shadow:0 0 0 4px #334b38}.text-link{border-color:#83a587}.brand-mark{border-color:#d7e5d3}.project{border-color:#405346}.project p,.project .full-title,.paper-row p,.coursework p{color:#a9bdad}.card-kicker,.list-type{color:#b7ed85}.coursework a{color:#d5e5d4}.about-copy{color:#d7e5d5}.about-copy em{color:#b7ed85}.section-head{border-color:#c5d5bc}.project:hover{border-color:#b7ed85}.hero-art{max-width:510px}.lab{background:#1c2b26;border:1px solid #45604c;border-radius:12px;overflow:hidden;box-shadow:0 20px 60px #0005}.lab-top{display:flex;justify-content:space-between;align-items:center;padding:15px 17px;border-bottom:1px solid #3b5142;color:#c5d4c0;font:10px/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase}.lab-top span:last-child{color:#b7ed85}.lab-tabs{display:flex;gap:6px;padding:12px 14px 0}.lab-tabs button,.lab-controls button{border:1px solid #536b55;border-radius:5px;background:transparent;color:#bed1ba;padding:7px 10px;cursor:pointer;font:10px/1.3 var(--mono);letter-spacing:.03em}.lab-tabs button[aria-pressed=true],.lab-controls button[aria-pressed=true]{background:#b7ed85;color:#142017;border-color:#b7ed85}.lab button:focus-visible{outline:2px solid #fff;outline-offset:3px}.lab-viewport{padding:15px 14px 0}.lab-viewport svg{width:100%;height:auto;display:block;border-radius:4px}.lab-viewport svg[hidden]{display:none}.lab-controls{display:flex;align-items:center;gap:7px;min-height:54px;padding:10px 14px}.lab-readout{font:10px/1.3 var(--mono);color:#d8e9d1;white-space:nowrap}.lab-caption{min-height:49px;padding:0 15px 16px;font:11px/1.55 var(--sans);color:#aabda9}.lab-caption strong{color:#dcebd5}.lab button:hover{border-color:#b7ed85}.lab svg .node{transition:opacity .2s,fill .2s,stroke .2s}.lab svg .selected{stroke:#c1f77e;fill:#557f4d}.lab svg .marker{transition:opacity .15s}@media(max-width:760px){.hero-art{max-width:none;margin-top:0}.lab-tabs button,.lab-controls button{padding:8px}.lab-caption{font-size:12px}}@media(prefers-reduced-motion:reduce){.lab svg .node,.lab svg .marker{transition:none}}
+<!DOCTYPE html>
+<!--
+Luka Homepage Template, MIT license:
+MIT License
+
+Copyright (c) 2023-present George Cushen (https://georgecushen.com/)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yubin Jing's research in image editing, video generation, and multimodal agents.">
+  <title>Yubin Jing · Homepage</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Ubuntu+Mono&display=swap');
+
+body {
+  background-color: #fff;
+  font: 18px/1.5 "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+  color: #595959;
+  font-weight: 400;
+}
+
 </style>
-<script id="playground-script">
-(()=>{const host=document.querySelector('.hero-art');if(!host)return;host.removeAttribute('aria-hidden');
-host.innerHTML=`<div class="lab" aria-label="Interactive research sketch"><div class="lab-top"><span>RESEARCH PLAYGROUND</span><span>TRY IT ↘</span></div><div class="lab-tabs" role="group" aria-label="Choose a research sketch"><button type="button" data-mode="image" aria-pressed="true">01 / MARK AN IMAGE</button><button type="button" data-mode="memory" aria-pressed="false">02 / VIDEO MEMORY</button></div><div class="lab-viewport"><svg id="lab-image" viewBox="0 0 470 255" role="img" aria-label="Illustrated mountain scene with a visual editing instruction"><rect width="470" height="255" fill="#25382d"/><path d="M0 184h470M48 0v255M422 0v255" stroke="#38533f"/><rect x="47" y="35" width="376" height="183" rx="3" fill="#354f39" stroke="#7f9f78"/><circle cx="320" cy="86" r="20" fill="#e8bc73"/><path d="M55 204l89-93 69 66 57-45 77 71" fill="#638768" stroke="#a0c199"/><path d="M56 204l93-49 48 30 44-24 65 43" fill="#426748" stroke="#80a47f"/><g class="marker" id="marker-box"><rect x="286" y="53" width="69" height="66" fill="none" stroke="#dbff96" stroke-width="3" stroke-dasharray="7 5"/></g><g class="marker" id="marker-arrow" opacity="0"><path d="M383 46c-24 11-39 22-57 34m10-1l-10 1 3-10" fill="none" stroke="#dbff96" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g><g class="marker" id="marker-circle" opacity="0"><circle cx="320" cy="86" r="34" fill="none" stroke="#dbff96" stroke-width="3"/></g><text x="63" y="239" fill="#b1c5a7" font-family="monospace" font-size="10" letter-spacing="2">YOUR MARK IS THE INSTRUCTION</text></svg><svg id="lab-memory" viewBox="0 0 470 255" role="img" aria-label="Illustrated sequence of video blocks and selected historical context" hidden><rect width="470" height="255" fill="#25382d"/><path d="M0 184h470M48 0v255M422 0v255" stroke="#38533f"/><text x="25" y="40" fill="#b1c5a7" font-family="monospace" font-size="10" letter-spacing="2">WHICH HISTORY SHOULD WE READ?</text><g id="history-nodes"></g><path d="M28 174H442" stroke="#79997c"/><text x="25" y="222" fill="#b1c5a7" font-family="monospace" font-size="10">HISTORY</text><text x="352" y="222" fill="#d7f8c6" font-family="monospace" font-size="10">CURRENT BLOCK</text></svg></div><div class="lab-controls" id="lab-controls"></div><div class="lab-caption" id="lab-caption" aria-live="polite"></div></div>`;
-const tabs=[...host.querySelectorAll('[data-mode]')],image=host.querySelector('#lab-image'),memory=host.querySelector('#lab-memory'),controls=host.querySelector('#lab-controls'),caption=host.querySelector('#lab-caption'),nodes=host.querySelector('#history-nodes');let mode='image',mark='box',phase='denoising';
-function renderImage(){image.removeAttribute('hidden');memory.setAttribute('hidden','');controls.innerHTML='<span class="lab-readout">MARK /</span> <button type="button" data-mark="box">BOX</button><button type="button" data-mark="arrow">ARROW</button><button type="button" data-mark="circle">CIRCLE</button>';controls.querySelectorAll('[data-mark]').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.mark===mark));b.addEventListener('click',()=>{mark=b.dataset.mark;renderImage();controls.querySelector('[data-mark="'+mark+'"]').focus()})});image.querySelectorAll('.marker').forEach(el=>el.setAttribute('opacity',el.id==='marker-'+mark?'1':'0'));caption.innerHTML='<strong>What if the image itself were an instruction?</strong> Try a different visual mark. Interactive illustration, not a model demo.';}
-function renderMemory(){image.setAttribute('hidden','');memory.removeAttribute('hidden');controls.innerHTML='<span class="lab-readout">READS /</span> <button type="button" data-phase="denoising">DENOISING</button><button type="button" data-phase="committing">KV WRITING</button>';controls.querySelectorAll('[data-phase]').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.phase===phase));b.addEventListener('click',()=>{phase=b.dataset.phase;renderMemory();controls.querySelector('[data-phase="'+phase+'"]').focus()})});nodes.innerHTML=Array.from({length:6},(_,i)=>{const x=27+i*70,active=i===5||(phase==='denoising'||i===4);return '<g class="node'+(active?' selected':'')+'"><rect x="'+x+'" y="88" width="54" height="55" rx="3" fill="'+(i===5?'#b7ed85':active?'#557f4d':'#33483a')+'" stroke="'+(active?'#c1f77e':'#6a866b')+'"/><path d="M'+(x+8)+' 130l10-13 10 8 10-17 8 12" fill="none" stroke="'+(i===5?'#243829':'#bbd2b2')+'"/><text x="'+(x+19)+'" y="163" fill="#b1c5a7" font-family="monospace" font-size="10">'+(i===5?'NOW':i===0?'SINK':'0'+(i+1))+'</text></g>'}).join('');caption.innerHTML=phase==='denoising'?'<strong>Denoising</strong> keeps the base context, which can include the sink. Interactive illustration, not a model demo.':'<strong>KV writing</strong> reads the previous block only; earlier history flows indirectly through the chain. Interactive illustration, not a model demo.';}
-tabs.forEach(button=>button.addEventListener('click',()=>{mode=button.dataset.mode;tabs.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));mode==='image'?renderImage():renderMemory()}));renderImage();})();
-</script></body></html>
+  <style>
+/* ============================================
+   Luka Homepage
+   Warm minimal academic homepage template
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+body.theme-luka,
+body.theme-luka *,
+body.theme-luka *::before,
+body.theme-luka *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --luka-bg: #faf9f7;
+  --luka-text: #3d3929;
+  --luka-accent: #c2714f;
+  --luka-secondary: #8c8577;
+  --luka-border: rgba(194, 113, 79, 0.2);
+  --luka-shadow: rgba(194, 113, 79, 0.15);
+  --luka-social-bg: #ffffff;
+  --luka-social-text: #8b7355;
+  --luka-footer-border: rgba(194, 113, 79, 0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --luka-bg: #1a1917;
+    --luka-text: #d1cec7;
+    --luka-accent: #e28a67;
+    --luka-secondary: #9b9488;
+    --luka-border: rgba(226, 138, 103, 0.2);
+    --luka-shadow: rgba(0, 0, 0, 0.3);
+    --luka-social-bg: #22211e;
+    --luka-social-text: #d1cec7;
+    --luka-footer-border: rgba(226, 138, 103, 0.15);
+  }
+}
+
+[data-theme="dark"] {
+  --luka-bg: #1a1917;
+  --luka-text: #d1cec7;
+  --luka-accent: #e28a67;
+  --luka-secondary: #9b9488;
+  --luka-border: rgba(226, 138, 103, 0.2);
+  --luka-shadow: rgba(0, 0, 0, 0.3);
+  --luka-social-bg: #22211e;
+  --luka-social-text: #d1cec7;
+  --luka-footer-border: rgba(226, 138, 103, 0.15);
+}
+
+[data-theme="light"] {
+  --luka-bg: #faf9f7;
+  --luka-text: #3d3929;
+  --luka-accent: #c2714f;
+  --luka-secondary: #8c8577;
+  --luka-border: rgba(194, 113, 79, 0.2);
+  --luka-shadow: rgba(194, 113, 79, 0.15);
+  --luka-social-bg: #ffffff;
+  --luka-social-text: #8b7355;
+  --luka-footer-border: rgba(194, 113, 79, 0.15);
+}
+
+body.theme-luka {
+  background: var(--luka-bg);
+  color: var(--luka-text);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.theme-luka a {
+  color: var(--luka-accent);
+  text-decoration: none;
+}
+
+body.theme-luka a:hover {
+  filter: brightness(1.15);
+}
+
+body.theme-luka .top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--luka-bg);
+  border-bottom: 1px solid var(--luka-footer-border);
+  z-index: 1000;
+}
+
+body.theme-luka .nav-container {
+  width: 100%;
+  max-width: 1120px;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body.theme-luka .nav-left a {
+  color: var(--luka-text);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+body.theme-luka .theme-toggle {
+  border: none;
+  background: transparent;
+  color: var(--luka-text);
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+body.theme-luka .theme-toggle:hover {
+  background: var(--luka-border);
+  color: var(--luka-accent);
+}
+
+body.theme-luka .wrapper {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+body.theme-luka .sidebar {
+  width: 320px;
+  flex-shrink: 0;
+  position: fixed;
+  top: 60px;
+  left: calc(50% - 560px);
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 60px;
+  z-index: 100;
+}
+
+body.theme-luka .profile-card {
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+
+body.theme-luka .image.avatar {
+  display: block;
+  margin: 0 auto 28px;
+}
+
+body.theme-luka .image.avatar img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 6px 24px var(--luka-shadow);
+}
+
+body.theme-luka .site-name {
+  margin: 0 0 8px;
+  color: var(--luka-text);
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+body.theme-luka .site-email {
+  margin: 0 0 24px;
+  color: var(--luka-secondary);
+  font-size: 13px;
+  font-family: "Ubuntu Mono", "SFMono-Regular", monospace;
+  word-break: break-all;
+}
+
+body.theme-luka .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+body.theme-luka .social-icons a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--luka-social-bg);
+  color: var(--luka-social-text) !important;
+  box-shadow: 0 2px 8px rgba(61, 57, 41, 0.08);
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+body.theme-luka .social-icons a:hover {
+  background: var(--luka-accent);
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+
+body.theme-luka .visitor-card {
+  margin: 40px auto 0;
+  width: 240px;
+  padding: 18px 16px;
+  border: 1px dashed var(--luka-border);
+  border-radius: 14px;
+  color: var(--luka-secondary);
+  text-align: left;
+}
+
+body.theme-luka .visitor-card-title {
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--luka-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+body.theme-luka .visitor-card-body {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+body.theme-luka .content {
+  flex: 1;
+  min-width: 0;
+  margin-left: 320px;
+  padding: 120px 40px 80px 60px;
+}
+
+body.theme-luka .section {
+  margin-bottom: 44px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+body.theme-luka .section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body.theme-luka .section-title {
+  display: inline-block;
+  margin: 0 0 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--luka-accent);
+  color: var(--luka-accent);
+  font-size: 19px;
+  font-weight: 600;
+}
+
+body.theme-luka .section-body p {
+  margin: 0 0 14px;
+}
+
+body.theme-luka .card {
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+}
+
+body.theme-luka .timeline-item {
+  position: relative;
+  margin-left: 20px;
+  padding-left: 8px;
+  padding-bottom: 20px;
+}
+
+body.theme-luka .timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--luka-accent), rgba(194, 113, 79, 0.12));
+}
+
+body.theme-luka .timeline-item:last-child::before {
+  bottom: 50%;
+}
+
+body.theme-luka .timeline-item::after {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 22px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--luka-accent);
+  border: 2px solid var(--luka-bg);
+}
+
+body.theme-luka .experience-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+body.theme-luka .institution-logo {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+body.theme-luka .experience-content {
+  flex: 1;
+}
+
+body.theme-luka .experience-content p {
+  margin: 0 0 2px;
+}
+
+body.theme-luka .exp-title {
+  font-size: 15px;
+  color: var(--luka-text);
+}
+
+body.theme-luka .exp-detail {
+  font-size: 14px;
+  color: var(--luka-secondary);
+}
+
+body.theme-luka .exp-period {
+  font-size: 13px;
+  color: var(--luka-accent);
+  font-weight: 500;
+}
+
+body.theme-luka .project-card {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+body.theme-luka .publications ol.bibliography {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body.theme-luka .publications ol.bibliography li {
+  margin-bottom: 14px;
+  padding: 15px 0 15px 16px;
+  border-left: 3px solid var(--luka-accent);
+}
+
+body.theme-luka .pub-content .title {
+  margin-bottom: 4px;
+  color: var(--luka-text);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+body.theme-luka .pub-content .author {
+  margin-bottom: 4px;
+  color: var(--luka-secondary);
+  font-size: 14px;
+}
+
+body.theme-luka .pub-content .periodical {
+  margin-bottom: 6px;
+  color: var(--luka-accent);
+  font-size: 14px;
+}
+
+body.theme-luka .pub-content .links a {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+body.theme-luka .awards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+body.theme-luka .award-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 0;
+}
+
+body.theme-luka .award-icon {
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+body.theme-luka .award-text {
+  color: var(--luka-text);
+  font-size: 14px;
+}
+
+body.theme-luka .site-footer {
+  width: 100%;
+  flex-basis: 100%;
+  padding: 32px 24px 40px 380px;
+  text-align: center;
+}
+
+body.theme-luka .site-footer p {
+  margin: 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--luka-footer-border);
+  color: var(--luka-secondary);
+  font-size: 13px;
+}
+
+body.theme-luka .template-credit {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+body.theme-luka h1,
+body.theme-luka h2,
+body.theme-luka h3,
+body.theme-luka h4,
+body.theme-luka strong {
+  color: var(--luka-text);
+}
+
+@media (max-width: 1080px) {
+  body.theme-luka .nav-container {
+    padding: 0 20px;
+  }
+
+  body.theme-luka .wrapper {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  body.theme-luka .sidebar {
+    position: static;
+    left: auto;
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    overflow: visible;
+  }
+
+  body.theme-luka .profile-card {
+    padding: 0;
+  }
+
+  body.theme-luka .content {
+    margin-left: 0;
+    padding: 32px 0 48px;
+  }
+
+  body.theme-luka .site-footer {
+    padding: 32px 0;
+  }
+
+  body.theme-luka .site-footer p {
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
+@media (max-width: 640px) {
+  body.theme-luka .image.avatar img {
+    width: 148px;
+    height: 148px;
+  }
+
+  body.theme-luka .site-name {
+    font-size: 24px;
+  }
+
+  body.theme-luka .experience-item {
+    gap: 12px;
+  }
+
+  body.theme-luka .institution-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  body.theme-luka .visitor-card {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  body.theme-luka .section {
+    margin-bottom: 32px;
+  }
+
+  body.theme-luka .section-title {
+    font-size: 18px;
+  }
+
+  body.theme-luka .project-card,
+  body.theme-luka .exp-detail,
+  body.theme-luka .award-text,
+  body.theme-luka .pub-content .author,
+  body.theme-luka .pub-content .periodical {
+    font-size: 13px;
+  }
+}
+
+</style>
+  <style>
+    body.theme-luka .section { opacity: 1; transform: none; }
+    body.theme-luka .profile-links { display:flex; justify-content:center; flex-wrap:wrap; gap: 14px; margin:18px 0 0; font-size:14px; }
+    body.theme-luka .profile-links a { color: var(--luka-accent); }
+    body.theme-luka .image.avatar img { object-fit:cover; }
+    body.theme-luka .theme-toggle { font-size:17px; }
+    body.theme-luka .pub-content .summary { margin:5px 0 6px; font-size:14px; color:var(--luka-secondary); }
+    body.theme-luka .experience-item { align-items:flex-start; }
+  </style>
+</head>
+<body class="theme-luka">
+  <nav class="top-nav" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="nav-left"><a href="#about">Home</a></div>
+      <div class="nav-right"><button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch color theme">☾</button></div>
+    </div>
+  </nav>
+
+  <div class="wrapper">
+    <header class="sidebar">
+      <div class="profile-card">
+        <div class="image avatar"><img src="profile.png" alt="Yubin Jing's profile illustration"></div>
+        <h1 class="site-name">Yubin Jing</h1>
+        <p class="site-email">whalesjyb@gmail.com</p>
+        <div class="profile-links"><a href="mailto:whalesjyb@gmail.com">Email</a><a href="https://github.com/Dwell-Jing">GitHub</a></div>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="section" id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="section-body">
+          <p>I am an M.S. student in Computational Science and Engineering at Georgia Tech. My work focuses on multimodal generation, including image editing, long video generation, and multimodal agents.</p>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="section-body">
+          <div class="card"><div class="experience-item"><div class="experience-content"><p class="exp-title"><strong>Georgia Institute of Technology</strong></p><p class="exp-detail">M.S. in Computational Science and Engineering</p><p class="exp-period">2025 – 2028 (expected)</p></div></div></div>
+          <div class="card"><div class="experience-item"><div class="experience-content"><p class="exp-title"><strong>Shanghai International Studies University</strong></p><p class="exp-detail">B.S. in Data Science and Big Data Technology</p><p class="exp-period">2021 – 2025</p></div></div></div>
+        </div>
+      </section>
+
+      <section class="section" id="publications">
+        <h2 class="section-title">Publications</h2>
+        <div class="section-body"><div class="publications"><ol class="bibliography">
+          <li><div class="pub-row"><div class="pub-content">
+            <div class="title">What Helps Denoising Can Hurt Memory: Rethinking History in Long Video Generation</div>
+            <div class="author"><strong>First author</strong></div>
+            <p class="summary">A training-free inference method for improving long-video consistency by changing how autoregressive video models read history when writing the KV cache.</p>
+            <div class="links"><a href="https://arxiv.org/abs/2611.00937">Paper</a> / <a href="https://github.com/Dwell-Jing/commit-forcing">Code</a></div>
+          </div></div></li>
+          <li><div class="pub-row"><div class="pub-content">
+            <div class="title">VPEBench: The Image Plane Is an Instruction Surface for Image Editing</div>
+            <div class="author"><strong>First author</strong></div>
+            <p class="summary">A benchmark for image editing with visual instructions such as boxes, arrows, and curves, covering 742 examples across 17 task types.</p>
+            <div class="links"><a href="https://github.com/Dwell-Jing/vpebench">Benchmark &amp; Code</a></div>
+          </div></div></li>
+          <li><div class="pub-row"><div class="pub-content">
+            <div class="title">Folding Language Models into Themselves</div>
+            <div class="author"><strong>Co-first author</strong></div>
+            <p class="summary">Concertina compresses language models by folding adjacent layers into shared blocks with lightweight corrections.</p>
+            <div class="links"><a href="https://arxiv.org/abs/2611.18113">Paper</a> / <a href="https://github.com/myboker/concertina">Code</a></div>
+          </div></div></li>
+          <li><div class="pub-row"><div class="pub-content">
+            <div class="title">Post-Training Leaves Behavioral Shadows on Unrelated Decisions</div>
+            <div class="author"><strong>Second author</strong></div>
+            <p class="summary">An investigation of how post-training affects unrelated decisions and how task-free distillation can transfer behaviors.</p>
+            <div class="links"><a href="https://arxiv.org/abs/2609.29233">Paper</a> / <a href="https://github.com/myboker/ATD">Code</a></div>
+          </div></div></li>
+        </ol></div></div>
+      </section>
+
+      <section class="section" id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="section-body">
+          <div class="card"><div class="experience-item"><div class="experience-content"><p class="exp-title"><strong>LibLibAI / LibTV</strong></p><p class="exp-detail">Research Intern · Video Generation and World Models</p><p class="exp-period">2026.08 – Present</p></div></div></div>
+          <div class="card"><div class="experience-item"><div class="experience-content"><p class="exp-title"><strong>LibLibAI / Lovart</strong></p><p class="exp-detail">Model Algorithm Intern · Image Editing and Multimodal Agents</p><p class="exp-period">2026.05 – 2026.07</p></div></div></div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <h2 class="section-title">Earlier Coursework</h2>
+        <div class="section-body">
+          <div class="card project-card"><a href="https://github.com/Dwell-Jing/SGANet-Vulnerability-Detection">SGANet Vulnerability Detection</a></div>
+          <div class="card project-card"><a href="https://github.com/Dwell-Jing/Information-Diffusion-Graph-Simulation-Framework">Information Diffusion Graph Simulation</a> — simulation of information diffusion on social networks using the Higgs Twitter dataset.</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>© 2026 Yubin Jing.<br><span class="template-credit"><a href="https://github.com/wzsyyh/luka-homepage-template">Luka Homepage Template</a> by <a href="https://wzsyyh.github.io/">Yuheng Yang</a></span></p></footer>
+  </div>
+  <script>
+    (function () {
+      const button = document.getElementById('themeToggle');
+      function setTheme(dark) {
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        button.textContent = dark ? '☀' : '☾';
+        try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (_) {}
+      }
+      let saved = null; try { saved = localStorage.getItem('theme'); } catch (_) {}
+      setTheme(saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches);
+      button.addEventListener('click', function () { setTheme(document.documentElement.getAttribute('data-theme') !== 'dark'); });
+    })();
+  </script>
+</body>
+</html>
